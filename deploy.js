@@ -12,6 +12,8 @@ const main = async () => {
  console.log("Deploying.... Please wait....");
  const contract = await contractFactory.deploy();
  console.log(contract);
+ const deploymentReceipt = await contract.deployTransaction.wait(1);
+ console.log(deploymentReceipt);
 
 }
 main()
